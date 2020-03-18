@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <title>Harjoitus 02</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body onload="loadContent()" ready>
+        <header>
+             <h1>Harjoitus 02</h1>
+        </header>
+        
+        <nav>
+            <a href="index.html">pääsivu</a>
+            <a href="02.html">Harjoitus 02</a>
+        </nav>
+        
+        <a href="02/index.html" download>lataa index.html</a>
+
+        <section>
+            <xmp id="xmpHTMLContent"></xmp>
+        </section>
+        
+        
+
+        <p>&copy;Verkkokehitys esimerkit(Ky&ouml;sti)</p>
+        
+        <script>
+            function loadContent() {
+                
+                var fileContent = loadFile("styles.css")
+                document.getElementById("xmpHTMLContent").innerHTML = fileContent;
+            }
+            function loadFile(filePath) {
+                //debugger;
+                var result = null;
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", filePath, false);
+                //xmlhttp.responseType = 'text';
+                xmlhttp.send(null);
+                if (xmlhttp.status==200) {
+                    alert("testi");
+                    result = xmlhttp.responseText;
+                }
+                return result;
+                }
+        </script>
+
+    </body>
+</html>
