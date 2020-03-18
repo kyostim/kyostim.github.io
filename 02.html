@@ -4,46 +4,35 @@
         <title>Harjoitus 02</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="styles.css">
+        <script src="jskoodi.js"></script>
     </head>
-    <body onload="loadContent()" ready>
+    <body onload="load02Content()">
         <header>
              <h1>Harjoitus 02</h1>
         </header>
         
         <nav>
-            <a href="index.html">pääsivu</a>
-            <a href="02.html">Harjoitus 02</a>
+            <a class="button" href="index.html">pääsivu</a>
+            <a class="selectedButton" href="02.html">Harjoitus 02</a>
+            <a class="button" href="03.html">Harjoitus 03</a>
         </nav>
         
-        <a href="02/index.html" download>lataa index.html</a>
-
-        <section>
+        
+        <h2>index.html</h2>
+        <section>    
             <xmp id="xmpHTMLContent"></xmp>
         </section>
-        
-        
 
+
+        
+        
         <p>&copy;Verkkokehitys esimerkit(Ky&ouml;sti)</p>
         
         <script>
-            function loadContent() {
-                
-                var fileContent = loadFile("02/index.html")
+            function load02Content() {    
+                var fileContent = loadFile("02/index.html");
                 document.getElementById("xmpHTMLContent").innerHTML = fileContent;
             }
-            function loadFile(filePath) {
-                //debugger;
-                var result = null;
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("GET", filePath, false);
-                //xmlhttp.responseType = 'text';
-                xmlhttp.send(null);
-                if (xmlhttp.status==200) {
-                    alert("testi");
-                    result = xmlhttp.responseText;
-                }
-                return result;
-                }
         </script>
 
     </body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <title>Harjoitus 03</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles.css">
+        <script src="jskoodi.js"></script>
+    </head>
+    <body onload="load03Content()">
+        <header>
+             <h1>Harjoitus 03</h1>
+        </header>
+        
+        <nav>
+            <a class="button" href="index.html">pääsivu</a>
+            <a class="button" href="02.html">Harjoitus 02</a>
+            <a class="selectedButton" href="03.html">Harjoitus 03</a>
+        </nav>
+        
+        <h2>index.html</h2>
+        <section>
+            <xmp id="xmpHTMLContent"></xmp>
+        </section>  
+
+        <h2>styles.css</h2>
+        <section>
+            <xmp id="xmpCSSContent"></xmp>
+        </section>         
+        
+        <p>&copy;Verkkokehitys esimerkit(Ky&ouml;sti)</p>
+        
+        
+        <script>
+            function load03Content() {    
+                var htmlFileContent = loadFile("03/index.html");
+                document.getElementById("xmpHTMLContent").innerHTML = htmlFileContent;
+                
+                var cssFileContent = loadFile("03/styles.css");
+                document.getElementById("xmpCSSContent").innerHTML = cssFileContent;
+            }
+        </script>
+
+    </body>
+</html>
