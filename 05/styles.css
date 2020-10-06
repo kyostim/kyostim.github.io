@@ -1,0 +1,30 @@
+body {
+    background: black;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 12px;
+    color: green;
+}
+
+div {
+     border: 2px dotted white;
+}
+
+.setDefaultSize {
+    width: 100px;
+    height: 100px;
+}
+
+ol {
+    list-style-type: lower-alpha;
+}
+
+ul {
+    list-style-type: square;
+}
