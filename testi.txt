@@ -1,3 +1,4 @@
 Tämä on testi tiedosto
 Uusi versio
 uudenpi versio
+uusi rivi
